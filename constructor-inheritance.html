@@ -17,6 +17,8 @@
 
         function Manager(firstName, lastName){
             this.lastName = lastName;
+
+            //Memanggil attribute dari Employee juga
             Employee.call(this, firstName);  //Sesuai dengan jumlah dan isi dari parameter Employee
         }
 
