@@ -17,7 +17,11 @@
 
         function Manager(firstName, lastName){
             this.lastName = lastName;
+            Employee.call(this, firstName);  //Sesuai dengan jumlah dan isi dari parameter Employee
         }
+
+        const miftah = new Manager("Huda", "Guntara");
+        console.log(miftah);
 
     </script>
 </body>
