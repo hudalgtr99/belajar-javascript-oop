@@ -16,12 +16,23 @@
             }
         }
 
+        Person.prototype.sayBye = function (){
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function (){
+            console.info(`${this.firstName} is running`);
+        }
+
         const miftah = new Person("Miftahul", "Huda"); //Objek OOP
-        miftah.sayHello("Guntara");
+
+        // // Menambahkan attribute secara individual terhadap satu objek/bukan satu class
+        // miftah.sayBye = function(){
+        //     console.info("Good Bye");
+        // }
 
         const huda = new Person("Huda", "Guntara"); //Objek OOP
-        huda.sayHello("Miftahul");
-
+        
         const bambang = {}; //Bukan OOP
 
         console.log(miftah);
