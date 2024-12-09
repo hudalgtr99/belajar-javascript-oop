@@ -13,6 +13,15 @@
             constructor(name){
                 this.name = name;
                 console.info(`Membuat Person ${name}`);
+
+                // //Tidak boleh membuat method didalam constructor (salah)
+                // this.sayHello = function(name){
+                //     console.info(`Hello ${name}, my name is ${this.name}`);
+                // }
+            }
+
+            sayHello(name){
+                console.info(`Hello ${name}, my name is ${this.name}`);
             }
 
         }
