@@ -10,12 +10,12 @@
 
         class Employee {
             
-            constructor(name){
-                this.name = name;
+            constructor(firstName){
+                this.firstName = firstName;
             }
 
             sayHello(name){
-                console.info(`Hello ${name}, my name is employee ${this.name}`);
+                console.info(`Hello ${name}, my name is employee ${this.firstName}`);
             }
         }
 
@@ -26,15 +26,21 @@
             //     this.name = name;
             // }
 
+            //Ini constructor tambahan jika berbeda dengan parents
+            constructor(firstName, lastName){
+                super(firstName);
+                this.lastName = lastName;
+            }
+
             sayHello(name){
-                console.info(`Hello ${name}, my name is manager ${this.name}`);
+                console.info(`Hello ${name}, my name is manager ${this.firstName} ${this.lastName}`);
             }
         }
 
         const miftah = new Employee("Miftah");
         miftah.sayHello("Rushia");
 
-        const huda = new Manager("Huda");
+        const huda = new Manager("Huda", "Guntara");
         huda.sayHello("Rushia");
 
         console.info(miftah);
