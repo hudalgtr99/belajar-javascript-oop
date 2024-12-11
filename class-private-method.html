@@ -19,14 +19,17 @@
             }
 
             #sayWithoutName(){
-
+                console.info("Hello");
             }
 
             #sayWithName(name){
-
+                console.info(`Hello ${name}`);
             }
-
         }
+
+        const miftah = new Person();
+        miftah.say("Huda");
+        // miftah.#sayWithoutName(); //Tidak Dapat diakses karna private method
 
     </script>
 </body>
