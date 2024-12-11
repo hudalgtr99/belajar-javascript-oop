@@ -9,13 +9,23 @@
     <script>
 
         class Configuration {
-            name = "Belajar Javascript OOP";
-            version = 1.0;
-            author = "Miftahul Huda Guntara";
+            static name = "Belajar Javascript OOP";
+            static version = 1.0;
+            static author = "Miftahul Huda Guntara";
         }
 
         const config = new Configuration();
-        console.info(config);
+        console.info(config); //Undefined karna yang diakses static
+
+        console.info(Configuration.name);
+        console.info(Configuration.version);
+        console.info(Configuration.author); //Miftahul Huda Guntara
+
+        Configuration.author = "Lathifa Syifa";
+        console.info(Configuration.author); //Lathifa Syifa
+
+
+
 
     </script>
 </body>
