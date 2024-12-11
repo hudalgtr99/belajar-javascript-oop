@@ -11,6 +11,11 @@
         class MathUtil {
 
             static sum(...numbers){
+
+                if(numbers.length === 0){
+                    throw new Error("Total parameter harus lebih dari 0");
+                }
+
                 let total = 0;
                 for(const number of numbers){
                     total +=number;
@@ -21,6 +26,9 @@
 
         const result = MathUtil.sum(1,1,1,1,1);
         console.info(result);
+
+        console.info(MathUtil.sum()); //error
+        console.info("Miftah"); //tidak muncul karna telah terjadi error terlebih dahulu
 
     </script>
 </body>
