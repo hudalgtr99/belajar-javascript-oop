@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+
+        class MathUtil {
+
+            static sum(...numbers){
+
+                if(numbers.length === 0){
+                    throw new Error("Total parameter harus lebih dari 0");
+                }
+
+                let total = 0;
+                for(const number of numbers){
+                    total +=number;
+                }
+                return total;
+            }
+        }
+
+        try {
+            console.info(MathUtil.sum()); //error
+            console.info("Miftah"); //tidak dijalankan karna error
+        }catch (error){
+            //jika terjadi error, maka catch akan dijalankan
+            console.info(`Terjadi error: ${error.message}`);
+        } finally {
+            //akan dijalankan apapun yg terjadi meskipun error atau tidak
+            console.info("Program Selesai")
+        }
+
+        console.info("Huda");
+
+        
+
+    </script>
+</body>
+</html>
