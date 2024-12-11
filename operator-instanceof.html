@@ -12,7 +12,7 @@
 
             }
 
-            class Manager{
+            class Manager extends Employee{
 
             }
 
@@ -25,7 +25,7 @@
             console.info(miftah instanceof Employee); //true
             console.info(miftah instanceof Manager); //false
 
-            console.info(rushia instanceof Employee); //false
+            console.info(rushia instanceof Employee); //true karna rushia sudah extends dari employee juga
             console.info(rushia instanceof Manager); //true
 
 
