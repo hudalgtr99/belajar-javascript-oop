@@ -8,6 +8,13 @@
 <body>
     <script>
 
+        class ValidationError extends Error {
+            constructor(message, field){
+                super(message);
+                this.field = field;
+            }
+        }
+
         class MathUtil {
 
             static sum(...numbers){
