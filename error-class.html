@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Handling</title>
+    <title>Error Class</title>
 </head>
 <body>
     <script>
@@ -20,7 +20,7 @@
             static sum(...numbers){
 
                 if(numbers.length === 0){
-                    throw new Error("Total parameter harus lebih dari 0");
+                    throw new ValidationError("Total parameter harus lebih dari 0", "numbers");
                 }
 
                 let total = 0;
@@ -36,7 +36,13 @@
             console.info("Miftah"); //tidak dijalankan karna error
         }catch (error){
             //jika terjadi error, maka catch akan dijalankan
-            console.info(`Terjadi error: ${error.message}`);
+
+            if(error instanceof ValidationError){
+                console.info(`Terjadi error di field ${error.field} dengan error ${error.message}`);
+            }else{
+                console.info(`Terjadi error: ${error.message}`);
+            }
+            
         } finally {
             //akan dijalankan apapun yg terjadi meskipun error atau tidak
             console.info("Program Selesai")
